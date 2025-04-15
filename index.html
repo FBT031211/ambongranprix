@@ -1,15 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=https://maps.app.goo.gl/kx6BLhbt8KcNHuuN8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokasi - Macedonia Fresca</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0d1117, #1a1f26);
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #00ffff; /* cyan */
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #80eaff; /* soft cyan */
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 250px;
+      height: 150px;
+      background: #1f2a33;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ccfaff;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeIn 0.5s forwards;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 12px rgba(0, 255, 255, 0.3);
+      background: #263843;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .card {
+        width: 90%;
+        height: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <p>Jika tidak diarahkan secara otomatis, klik <a href="https://maps.app.goo.gl/kx6BLhbt8KcNHuuN8">di sini</a>.</p>
-    <script>
-        window.location.href = "https://maps.app.goo.gl/kx6BLhbt8KcNHuuN8";
-    </script>
+
+  <h1>Lokasi</h1>
+  <h2>Macedonia Fresca</h2>
+
+  <div class="container">
+    <a href="https://maps.app.goo.gl/kx6BLhbt8KcNHuuN8" class="card" target="_blank">Lokasi 1</a>
+    <a href="https://maps.app.goo.gl/wHLpBXBLjuDGj9mEA" class="card" target="_blank">Lokasi 2</a>
+  </div>
+
 </body>
 </html>
